@@ -1,0 +1,61 @@
+<div class="section-content section-content-p30">
+    <div class="container-fluid">
+        <div class="header-wrap">
+            <div class="form-header">
+
+                <!-- #myInput is the name of the input element  -->
+                <input #myInput type="text" placeholder="Search for products" class="au-input au-input-xl"
+                    (keyup.enter)="doSearch(myInput.value)" />
+
+                <button (click)="doSearch(myInput.value)" class="au-btn-submit">
+                    Search
+                </button>
+
+            </div>
+            <!-- <div class="cart-area d-n">
+                <a href="shopping-detail.html">
+                    <div class="total">19.22 <span> 2</span> </div> <i class="fa fa-shopping-cart"
+                        aria-hidden="true"></i>
+                </a>
+            </div> -->
+           
+           
+            <div id="app">
+                <nav class="navbar navbar-expand navbar-dark bg-dark">
+                  <ul class="navbar-nav mr-auto" routerLinkActive="active">
+                    <li class="nav-item">
+                      <a href="/home" class="nav-link" routerLink="home">Home </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="/user" class="nav-link" *ngIf="isLoggedIn" routerLink="user">User</a>
+                    </li>
+                  </ul>
+              
+                  <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+                    <li class="nav-item">
+                      <a href="/register" class="nav-link" routerLink="register">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="/login" class="nav-link" routerLink="login">Login</a>
+                    </li>
+                  </ul>
+              
+                  <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+                    <li class="nav-item">
+                      <a href="/profile" class="nav-link" routerLink="profile">{{ username }}</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href class="nav-link" (click)="logout()">LogOut</a>
+                    </li>
+                  </ul>
+                </nav>          
+            </div>
+
+
+
+            
+              
+            <app-cart-status></app-cart-status>
+        </div>
+        <div class="account-wrap"></div>
+    </div>
