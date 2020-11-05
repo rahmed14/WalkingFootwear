@@ -1,0 +1,4 @@
+Oct 30, 2020 1:04:40 PM cogent.demo.controllers.PaymentController chargeCard
+INFO: null
+Oct 30, 2020 1:05:26 PM cogent.demo.controllers.PaymentController chargeCard
+INFO: null
